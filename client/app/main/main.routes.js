@@ -6,9 +6,9 @@ export default function routes($stateProvider) {
   $stateProvider.state('main', {
     url: '/',
     template: '<main></main>'
-  });
-  /* .state('topics/{mainTopicId:[^/]*}', {
+  })
+  .state('topics/{mainTopicId:[^/]*}', {
     url: '/{mainTopicId}',
     template: '<main></main>'
-  }); */
+  });
 }

@@ -20,6 +20,7 @@ Topic.create(
 { title: 'Donald Trump' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Donald_Trump', 'streamAPILevel':6},
 { title: 'Bitcoin' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Bitcoin', 'streamAPILevel':5},
 { title: 'Blockchain' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Blockchain', 'streamAPILevel':6},
+{ title: 'Female Entrepreneurs' , wikipediaUrl: 'https://en.m.wikipedia.org/wiki/Female_entrepreneurs', 'streamAPILevel':5},
 { title: 'User Onboarding' , wikipediaUrl: 'https://en.wikipedia.org/wiki/User_onboarding', 'streamAPILevel':5},
 { title: 'User Interface Design' , wikipediaUrl: 'https://en.wikipedia.org/wiki/User_interface_design', 'streamAPILevel':5},
 { title: 'decontextualize' , wikipediaUrl: 'https://en.wiktionary.org/wiki/decontextualize', 'streamAPILevel':5},
