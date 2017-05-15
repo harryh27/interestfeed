@@ -34,7 +34,7 @@ import socket from '../components/socket/socket.service';
 import './app.css';
 
 angular.module('interestfeedApp', [ngCookies, ngResource, ngSanitize, 'btford.socket-io', uiRouter,
-  uiBootstrap, _Auth, account, admin, navbar, footer, main, ItemsComponent, StatusesComponent, CategorysComponent, TopicsComponent, constants, socket, util
+  uiBootstrap, _Auth, account, admin, navbar, footer, main, ItemsComponent, StatusesComponent, CategorysComponent, TopicsComponent, 'infinite-scroll', constants, socket, util
 ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {

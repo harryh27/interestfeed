@@ -18,7 +18,7 @@ export class MainController {
   tweetslength = 0;
   allData = [];
   page = 0;
-  step = 20;
+  step = 10;
   self = this;
 
   /*@ngInject*/
@@ -68,7 +68,7 @@ export class MainController {
   }
   
   nextPage = function() {
-	  //console.log('nextPage() busy=', this.busy);
+	  console.log('nextPage() busy=', this.busy);
 	  
 	if(!this.busy) {  
 		  this.busy = true;

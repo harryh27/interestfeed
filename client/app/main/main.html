@@ -4,7 +4,7 @@
 					<div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 300, "gutter":20 }' >
 						<div ng-repeat="tweet in mainCtrl.topic.tweets" >
 							<div class="grid-item">
-								<!-- <div class="tweet-details">tweet.id_str=<span ng-bind-html="tweet.id_str"></span></div>
+								<div class="tweet-details">tweet.id_str=<span ng-bind-html="tweet.id_str"></span></div>
 								<div class="tweet-details">tweet.user.id_str=<span ng-bind-html="tweet.user.id_str"></span></div>
 								<div class="tweet-details">tweet.timestamp_ms=<span ng-bind-html="tweet.timestamp_ms"></span></div>
 								
@@ -12,7 +12,7 @@
 										<div class="tweet-details">item._id=<span ng-bind-html="item._id"></span></div>
 										<div class="tweet-details">item.title=<span ng-bind-html="item.page_extract.title"></span></div>
 										<div class="tweet-details">item.keywords=<span ng-bind-html="item.semantic.keywords"></span></div>
-								</div> -->
+								</div>
 								<blockquote class="twitter-tweet"><a ng-href="{{'https://twitter.com/' + tweet.user.screen_name + '/status/' + tweet.id_str }}"></a></blockquote>
 							</div>
 						</div>	
