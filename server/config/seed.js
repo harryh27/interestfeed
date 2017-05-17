@@ -28,6 +28,7 @@ Topic.create(
 { title: 'IOER rate' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Excess_reserves', 'streamAPILevel':5},
 { title: 'React Native' , wikipediaUrl: 'https://en.wikipedia.org/wiki/React_(JavaScript_library)#React_Native', 'streamAPILevel':4},
 { title: 'Kotlin' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Kotlin_(programming_language)', 'streamAPILevel':5},
+{ title: 'Clayton Christensen' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Clayton_M._Christensen', 'streamAPILevel':5},
 { title: 'Plyometrics' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Plyometrics', 'streamAPILevel':5},
 { title: 'Kubernetes' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Kubernetes', 'streamAPILevel':5},
 { title: 'Epigenetics' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Epigenetics', 'streamAPILevel':5},

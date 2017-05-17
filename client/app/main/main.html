@@ -1,4 +1,15 @@
 <div class="container">
+
+	<div class="row">
+		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+			<h4 class="page-header">{{mainCtrl.topic.title}} Tweets count={{mainCtrl.topic.tweets.length}}</h4>
+		</div>
+		
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-3">
+			
+		</div>
+	</div>
+
 	<div class="row" infinite-scroll-disabled="mainCtrl.busy || mainCtrl.noMoreData" infinite-scroll="mainCtrl.nextPage()" infinite-scroll-immediate-check="false" infinite-scroll-distance="1.5" >
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
 					<div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 300, "gutter":20 }' >
