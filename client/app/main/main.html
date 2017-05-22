@@ -1,8 +1,58 @@
 <div class="container">
 
 	<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<span ng-repeat="category in mainCtrl.topic.categories" >
+					<span ng-repeat="category1 in category" >
+						<!-- <div class="tweet-details">category=<span ng-bind-html="category"></span></div> -->
+						
+						<a ng-href="category/{{category1.replace(' ', '_')}}">{{category1}}</a> | 
+					</span>	
+				<!-- <div class="tweet-details">tweet.id=<span ng-bind-html="mainCtrl.topic.categories"></span></div> -->
+				</span>
+			</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+		
+			<form class="thing-form">
+				<p class="input-group">
+				  <input type="text" class="form-control" placeholder="Search Topics" ng-model="$ctrl.newThing">
+				  <span class="input-group-btn">
+					<button type="submit" class="btn btn-primary" ng-click="$ctrl.addThing()">Search</button>
+				  </span>
+				</p>
+			</form>
+		
+		</div>
+	
+		<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+		
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<label>Get Interest Feed on Mobile</label>
+					<a ng-href ="https://itunes.apple.com/us/app/clash-royale/id1053012308?mt=8" >
+						<img class="img-responsive pull-left" ng-src="//linkmaker.itunes.apple.com/assets/shared/badges/en-gb/appstore-lrg.svg" />
+					</a>
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<a ng-href="https://play.google.com/store/apps/details?id=com.quora.android&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
+						<img class="img-responsive pull-left" ng-src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play" />
+					</a>
+				</div>
+			</div>
+		
+		</div>
+	
+	</div>
+
+	<div class="row">
 		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-			<h4 class="page-header">{{mainCtrl.topic.title}} Tweets count={{mainCtrl.topic.tweets.length}}</h4>
+			<h4 class="page-header">{{mainCtrl.topic.title}} Tweets <!-- count={{mainCtrl.topic.tweets.length}} --></h4>
 		</div>
 		
 		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-3">
