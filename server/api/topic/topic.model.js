@@ -40,6 +40,7 @@ var TextSchema = new mongoose.Schema({
   
 var TopicSchema = new mongoose.Schema({	
     title: String,
+	redisQueryId: String,
 	wikipediaUrl: String,
 	images: [ImageSchema],
 	tweetsByText: [{
@@ -58,6 +59,7 @@ var TopicSchema = new mongoose.Schema({
 });
 
 TopicSchema.index({"title": 1}, {unique: true});
+TopicSchema.index({"redisQueryId": 1});
 TopicSchema.index({"title": 1, "streamAPILevel": 1});
 TopicSchema.index({"_id": 1, "tweetsByText._id": 1}, {unique: true});
 TopicSchema.index({"_id": 1, "tweetsBySemantic._id": 1}, {unique: true});

@@ -14,12 +14,21 @@ import Topic from '../api/topic/topic.model';
 // { title: '' , wikipediaUrl: '', 'streamAPILevel':5},
 
 
+
 Topic.find({}).remove()
   .then(() => {
 Topic.create(
 { title: 'Donald Trump' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Donald_Trump', 'streamAPILevel':6},
 { title: 'Bitcoin' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Bitcoin', 'streamAPILevel':5},
+{ title: 'Omni Layer' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Mastercoin', 'streamAPILevel':5},
 { title: 'Blockchain' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Blockchain', 'streamAPILevel':6},
+{ title: 'Social Media Marketing' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Social_media_marketing', 'streamAPILevel':5},
+{ title: 'Angular' , wikipediaUrl: 'https://en.wikipedia.org/wiki/AngularJS', 'streamAPILevel':6},
+{ title: 'Xamarin' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Xamarin', 'streamAPILevel':6},
+{ title: 'Ionic' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Ionic_(mobile_app_framework)', 'streamAPILevel':6},
+{ title: 'Alex Malley' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Alex_Malley', 'streamAPILevel':5},
+{ title: 'Brett Stevenson' , wikipediaUrl: 'https://www.linkedin.com/in/brett-stevenson-1a445259/?ppe=1', 'streamAPILevel':5},
+{ title: 'Executive Compensation' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Executive_compensation', 'streamAPILevel':5},
 { title: 'Female Entrepreneurs' , wikipediaUrl: 'https://en.m.wikipedia.org/wiki/Female_entrepreneurs', 'streamAPILevel':5},
 { title: 'User Onboarding' , wikipediaUrl: 'https://en.wikipedia.org/wiki/User_onboarding', 'streamAPILevel':5},
 { title: 'User Interface Design' , wikipediaUrl: 'https://en.wikipedia.org/wiki/User_interface_design', 'streamAPILevel':5},
@@ -38,7 +47,7 @@ Topic.create(
 { title: 'Climate Change' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Climate_change', 'streamAPILevel':5},
 { title: 'Global Warming' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Global_warming', 'streamAPILevel':5},
 { title: 'Austrian School' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Austrian_School', 'streamAPILevel':5},
-{ title: 'tfâ€“idf' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Tf%E2%80%93idf', 'streamAPILevel':5},
+{ title: 'tf-idf' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Tf%E2%80%93idf', 'streamAPILevel':5},
 { title: 'Artificial Intelligence' , wikipediaUrl: 'https://en.m.wikipedia.org/wiki/Artificial_intelligence', 'streamAPILevel':6},
 { title: 'Ad Blocking' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Ad_blocking', 'streamAPILevel':5},
 { title: 'Attention Economy' , wikipediaUrl: 'https://en.m.wikipedia.org/wiki/Attention_economy', 'streamAPILevel':5},
@@ -57,7 +66,7 @@ Topic.create(
 { title: 'Rene Girard' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Ren%C3%A9_Girard', 'streamAPILevel':5},
 { title: 'Steve Bannon' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Steve_Bannon', 'streamAPILevel':5},
 { title: 'Antifragile' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Antifragile', 'streamAPILevel':5},
-{ title: 'Brexit' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Brexit', 'streamAPILevel':5},
+{ title: 'Brexit' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Brexit', 'streamAPILevel':6},
 { title: 'Max Levchin' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Max_Levchin', 'streamAPILevel':5},
 { title: 'Neural Lace' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Brain%E2%80%93computer_interface', 'streamAPILevel':5}, 
 { title: 'Ethereum' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Ethereum', 'streamAPILevel':5},
