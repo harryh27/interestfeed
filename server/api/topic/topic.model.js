@@ -40,7 +40,7 @@ var TextSchema = new mongoose.Schema({
   
 var TopicSchema = new mongoose.Schema({	
     title: String,
-	redisQueryId: String,
+	redisQueryId: { type: String, default: null },
 	wikipediaUrl: String,
 	images: [ImageSchema],
 	tweetsByText: [{

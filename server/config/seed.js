@@ -13,14 +13,14 @@ import Topic from '../api/topic/topic.model';
 // { title: '' , wikipediaUrl: '', 'streamAPILevel':1},
 // { title: '' , wikipediaUrl: '', 'streamAPILevel':5},
 
-
-
 Topic.find({}).remove()
   .then(() => {
 Topic.create(
 { title: 'Donald Trump' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Donald_Trump', 'streamAPILevel':6},
 { title: 'Bitcoin' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Bitcoin', 'streamAPILevel':5},
 { title: 'Omni Layer' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Mastercoin', 'streamAPILevel':5},
+{ title: 'OWASP' , wikipediaUrl: 'https://en.wikipedia.org/wiki/OWASP', 'streamAPILevel':5},
+{ title: 'Merkle Tree' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Merkle_tree', 'streamAPILevel':5},
 { title: 'Blockchain' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Blockchain', 'streamAPILevel':6},
 { title: 'Social Media Marketing' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Social_media_marketing', 'streamAPILevel':5},
 { title: 'Angular' , wikipediaUrl: 'https://en.wikipedia.org/wiki/AngularJS', 'streamAPILevel':6},

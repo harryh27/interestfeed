@@ -79,6 +79,10 @@ var StatusSchema = new mongoose.Schema({
   lang: String,
   timestamp_ms: String,
   retweetFavoriteTimeLine : [RetweetFavoriteTimeLineSchema],
+  topics: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Topic'
+        }],
   items: [{
         type: mongoose.Schema.Types.ObjectId,
 		ref: 'Item'

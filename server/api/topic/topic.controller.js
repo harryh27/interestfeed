@@ -74,7 +74,7 @@ export function index(req, res) {
 export function show(req, res) {
 	return Topic.aggregate(
 		{$match: { title: {$regex: req.params.id, $options: "i"}}},
-		{$unwind:'$tweetsByText'},
+		{$unwind: {path: "$tweetsByText", preserveNullAndEmptyArrays: true }},
 		{$lookup: {"from": "status",
             "localField": "tweetsByText",
             "foreignField": "_id",
@@ -94,6 +94,28 @@ export function show(req, res) {
 			.then(handleEntityNotFound(res))
 			.then(respondWithResult(res))
 			.catch(handleError(res));
+	/* return Topic.aggregate(
+		{$match: { title: {$regex: req.params.id, $options: "i"}}},
+		{$unwind:'$tweetsByText'},
+		{$lookup: {"from": "status",
+            "localField": "tweetsByText",
+            "foreignField": "_id",
+            "as": "tweets"
+		}},
+		{$unwind: {path: "$tweets", preserveNullAndEmptyArrays: true }},
+		{$unwind: {path: "$tweets.items", preserveNullAndEmptyArrays: true }},
+		{$lookup: {"from": "items",
+			"localField": "tweets.items",
+			"foreignField": "_id",
+			"as": "tweets.items"
+		}},
+		{$sort:{id:1, title:1, 'tweets.retweet_count': -1, 'tweets.favorite_count': -1, 'tweets.timestamp_ms':-1}},
+		{$group: {_id: '$_id', title:{$first:'$title'}, categories: { $addToSet : '$categories' }, 'tweets': {$push: '$tweets'}}},
+		{$project: { _id: 1, title: 1, categories: 1, tweets: {$slice: [ "$tweets", 0, 1000 ]}}}
+		).exec()
+			.then(handleEntityNotFound(res))
+			.then(respondWithResult(res))
+			.catch(handleError(res)); */
 	
   /* return Topic.findById(req.params.id).exec()
     .then(handleEntityNotFound(res))
