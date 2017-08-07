@@ -30,21 +30,31 @@ var PageLinkSchema = new mongoose.Schema({
 },{ _id : false });	
 
 var PageExtractSchema = new mongoose.Schema({
-	title: String,
-	softTitle: String,
-	date: String,
-	copyright: String,
-	author: String,
-	publisher: String,
-	text: String,
-	content_stripped: String,
-	word_count: Number,
-	image: String,
-	canonicalLink: String,
-	lang: String,
-	description: String,
-	favicon: String,
+	title: {type: String, default: ''},
+	softTitle: {type: String, default: ''},
+	date: {type: String, default: ''},
+	copyright: {type: String, default: ''},
+	author: {type: String, default: ''},
+	publisher: {type: String, default: ''},
+	text: {type: String, default: ''},
+	content_stripped: {type: String, default: ''},
+	word_count: { type: Number, default: 0 },
+	image: {type: String, default: ''},
+	canonicalLink: {type: String, default: ''},
+	lang: {type: String, default: ''},
+	description: {type: String, default: ''},
+	favicon: {type: String, default: ''},
 	links : [PageLinkSchema]
+},{ _id : false });
+
+var MetaDataSchema = new mongoose.Schema({
+	author: {type: String, default: ''},
+	date: {type: String, default: ''},
+	description: {type: String, default: ''},
+	image: {type: String, default: ''},
+	publisher: {type: String, default: ''},
+	title: {type: String, default: ''},
+	url: {type: String, default: ''}
 },{ _id : false });
 
  var ItemSchema = new mongoose.Schema({
@@ -55,6 +65,7 @@ var PageExtractSchema = new mongoose.Schema({
 	canonical_urls : {type: [String], required: true},
 	page_title: String,
 	page_extract: PageExtractSchema,
+	meta_data: MetaDataSchema,
 	semantic : SemanticSchema,
 	statuses: [{
         type: mongoose.Schema.Types.ObjectId,

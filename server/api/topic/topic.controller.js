@@ -72,8 +72,9 @@ export function index(req, res) {
 
 // Gets a single Topic from the DB
 export function show(req, res) {
+	var title = "^" + req.params.id + "$"
 	return Topic.aggregate(
-		{$match: { title: {$regex: req.params.id, $options: "i"}}},
+		{$match: { title: {$regex:  title , $options: "i"}}},
 		{$unwind: {path: "$tweetsByText", preserveNullAndEmptyArrays: true }},
 		{$lookup: {"from": "status",
             "localField": "tweetsByText",
@@ -94,9 +95,10 @@ export function show(req, res) {
 			.then(handleEntityNotFound(res))
 			.then(respondWithResult(res))
 			.catch(handleError(res));
+			
 	/* return Topic.aggregate(
 		{$match: { title: {$regex: req.params.id, $options: "i"}}},
-		{$unwind:'$tweetsByText'},
+		{$unwind: {path: "$tweetsByText", preserveNullAndEmptyArrays: true }},
 		{$lookup: {"from": "status",
             "localField": "tweetsByText",
             "foreignField": "_id",
@@ -116,11 +118,6 @@ export function show(req, res) {
 			.then(handleEntityNotFound(res))
 			.then(respondWithResult(res))
 			.catch(handleError(res)); */
-	
-  /* return Topic.findById(req.params.id).exec()
-    .then(handleEntityNotFound(res))
-    .then(respondWithResult(res))
-    .catch(handleError(res)); */
 }
 
 // Creates a new Topic in the DB

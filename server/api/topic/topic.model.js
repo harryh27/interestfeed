@@ -23,12 +23,19 @@ var SemanticSchema = new mongoose.Schema({
 	semantic_slices: [SlicesSchema],
 },{ _id : false });
 
-var ImageSchema = new mongoose.Schema({	
+/* var ImageSchema = new mongoose.Schema({	
     url: String,
 	file: String,
 	thumb: String,
 },{ _id : false });
-
+ */
+ 
+var ImageSchema = new mongoose.Schema({	
+    url: { type: String, default: '', trim: true },
+	file: { type: String, default: '', trim: true },
+	thumb: { type: String, default: '', trim: true },
+},{ _id : false });
+ 
 var TextSchema = new mongoose.Schema({	
     intro: { content_stripped: String, word_count: Number },
 	complete: { 
@@ -38,7 +45,7 @@ var TextSchema = new mongoose.Schema({
 			},
 },{ _id : false }); 
   
-var TopicSchema = new mongoose.Schema({	
+/* var TopicSchema = new mongoose.Schema({	
     title: String,
 	redisQueryId: { type: String, default: null },
 	wikipediaUrl: String,
@@ -53,6 +60,26 @@ var TopicSchema = new mongoose.Schema({
         }],	
 	categories: [String],
 	text : TextSchema,
+	streamAPILevel: { type: Number, default: 0 },
+	lastUpdated: { type: Date, default: Date.now },
+	processingStage: { type: Number, default: 0 },
+}); */
+
+var TopicSchema = new mongoose.Schema({	
+    title: String,
+	redisQueryId: { type: String, default: null },
+	wikipediaUrl: String,
+	images: [ImageSchema],
+	tweetsByText: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Status'
+        }],
+	tweetsBySemantic: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Status'
+        }],	
+	categories: { type: [String], default: [] },
+	text : { type: TextSchema, default: null },
 	streamAPILevel: { type: Number, default: 0 },
 	lastUpdated: { type: Date, default: Date.now },
 	processingStage: { type: Number, default: 0 },
