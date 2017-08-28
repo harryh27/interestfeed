@@ -13,14 +13,19 @@ import Topic from '../api/topic/topic.model';
 // { title: '' , wikipediaUrl: '', 'streamAPILevel':1},
 // { title: '' , wikipediaUrl: '', 'streamAPILevel':5},
 
+ 
+
 Topic.find({}).remove()
   .then(() => {
 Topic.create(
 { title: 'Donald Trump' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Donald_Trump', 'streamAPILevel':6},
 { title: 'Bitcoin' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Bitcoin', 'streamAPILevel':5},
 { title: 'Smart Contract' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Smart_contract', 'streamAPILevel':5},
+{ title: 'SegWit' , wikipediaUrl: 'https://en.wikipedia.org/wiki/SegWit', 'streamAPILevel':5},
+{ title: 'Mechanism design' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Mechanism_design', 'streamAPILevel':5},
 { title: 'AgTech' , wikipediaUrl: 'http://acronyms.thefreedictionary.com/AGTECH', 'streamAPILevel':5},
 { title: 'Hyperledger' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Hyperledger', 'streamAPILevel':5},
+{ title: 'Futarchy' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Futarchy', 'streamAPILevel':5},
 { title: 'Tezos' , wikipediaUrl: 'http://wiki.p2pfoundation.net/Tezos', 'streamAPILevel':6},
 { title: 'Decred' , wikipediaUrl: 'http://cryptocoin.cc/table.php?cryptocoin=decred', 'streamAPILevel':5},
 { title: 'Dash' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Dash_(cryptocurrency)', 'streamAPILevel':5},
@@ -34,6 +39,7 @@ Topic.create(
 { title: 'Zero Knowledge Proof' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Zero-knowledge_proof', 'streamAPILevel':5},
 { title: 'Sybil Attack' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Sybil_attack', 'streamAPILevel':5},
 { title: 'Golang' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Go_(programming_language)', 'streamAPILevel':5},
+{ title: 'HATEOAS' , wikipediaUrl: 'https://en.wikipedia.org/wiki/HATEOAS', 'streamAPILevel':5},
 { title: 'Semantic Folding' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Semantic_folding', 'streamAPILevel':5},
 { title: 'Omni Layer' , wikipediaUrl: 'https://en.wikipedia.org/wiki/Mastercoin', 'streamAPILevel':5},
 { title: 'OCaml' , wikipediaUrl: 'https://en.wikipedia.org/wiki/OCaml', 'streamAPILevel':6},
